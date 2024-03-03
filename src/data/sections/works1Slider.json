@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Exquisite Staircasestechnology",
+    "secTex": "Exquisite Staircases",
+    "image": "/img/portfolio/metro/01.jpg",
+    "slug": "/project-details2/project-details2-dark"
+  },
+  {
+    "id": 2,
+    "title": "technology",
+    "secTex": "Digital Transformation",
+    "image": "/img/portfolio/metro/02.jpg",
+    "slug": "/project-details2/project-details2-dark"
+  },
+  {
+    "id": 3,
+    "title": "technology",
+    "secTex": "Natural plus modern",
+    "image": "/img/portfolio/metro/03.jpg",
+    "slug": "/project-details2/project-details2-dark"
+  },
+  {
+    "id": 4,
+    "title": "technology",
+    "secTex": "Digital Transformation",
+    "image": "/img/portfolio/metro/04.jpg",
+    "slug": "/project-details2/project-details2-dark"
+  },
+  {
+    "id": 5,
+    "title": "technology",
+    "secTex": "Natural plus modern",
+    "image": "/img/portfolio/metro/05.jpg",
+    "slug": "/project-details2/project-details2-dark"
+  }
+]

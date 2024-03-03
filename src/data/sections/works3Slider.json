@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Ascend to Unparalleled Elegance!",
+    "secTex": "Exquisite Staircases",
+    "image": "/img/portfolio/curs/staircase.jpg",
+    "slug": "/project-details/project-details-dark"
+  },
+  {
+    "id": 2,
+    "title": "Embrace Timeless Beauty!",
+    "secTex": "Enchanting Hardwood",
+    "image": "/img/portfolio/curs/hardwood.jpg",
+    "slug": "/project-details/project-details-dark"
+  },
+  {
+    "id": 3,
+    "title": "Illuminate Space with Brilliance!",
+    "secTex": "Radiant Tiles",
+    "image": "/img/portfolio/curs/tiles.jpg",
+    "slug": "/project-details/project-details-dark"
+  },
+  {
+    "id": 4,
+    "title": "Redefine Style with Simplicity!",
+    "secTex": "Sleek Laminate",
+    "image": "/img/portfolio/curs/laminate.jpg",
+    "slug": "/project-details/project-details-dark"
+  },
+  {
+    "id": 5,
+    "title": "Endless Possibilities",
+    "secTex": "Versatile Vinyl",
+    "image": "/img/portfolio/curs/vinyl.jpg",
+    "slug": "/project-details/project-details-dark"
+  }
+]

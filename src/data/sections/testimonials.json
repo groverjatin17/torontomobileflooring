@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Mike Smith",
+    "position": "Co-Founder, Toronto",
+    "comment": "Passionate designer turned entrepreneur, transforming spaces with meticulous detail. Functionality and beauty harmonize, creating inspiring environments. Let&apos;s exceed expectations on your renovation journey."
+  },
+  {
+    "id": 2,
+    "name": "Harry Chatum",
+    "position": "Co-Founder, Toronto",
+    "comment": "Craftsman turned luxury interior designer. I curate bespoke spaces, capturing timeless beauty and opulence. Let&apos;s embark on a journey of elegance and refined craftsmanship."
+  },
+  {
+    "id": 3,
+    "name": "Austin Teja",
+    "position": "Site Manager",
+    "comment": "Dedicated site supervisor driving seamless construction projects. Sharp eye for detail, efficient operations. Expertly oversee site management, ensuring timelines, quality, and safety. Trust my leadership for exceptional results that exceed expectations."
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "/img/team/1.jpg",
+    "name": "Hasib sharif",
+    "title": "Tile Installer"
+  },
+  {
+    "id": 2,
+    "image": "/img/team/2.jpg",
+    "name": "Jonson Leo",
+    "title": "Floor Cover Installer"
+  },
+  {
+    "id": 3,
+    "image": "/img/team/3.jpg",
+    "name": "Leio Man",
+    "title": "Warehouse Manager"
+  },
+  {
+    "id": 4,
+    "image": "/img/team/4.jpg",
+    "name": "Robert Front",
+    "title": "Design Expert"
+  },
+  {
+    "id": 5,
+    "image": "/img/team/5.jpg",
+    "name": "Legender Mao",
+    "title": "Interior Designer"
+  },
+  {
+    "id": 6,
+    "image": "/img/team/6.jpg",
+    "name": "Matt Huk",
+    "title": "3D Visualization"
+  }
+]

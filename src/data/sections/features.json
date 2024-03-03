@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "pe-7s-gleam",
+    "title": "Strong as Oak",
+    "details": "Embrace the Beauty of Premium Floors that your house deserves."
+  },
+  {
+    "id": 2,
+    "icon": "pe-7s-paint-bucket",
+    "title": "Timeless as Tradition",
+    "details": "Unparalleled beauty and Elegance that last longer than your lifeline."
+  },
+  {
+    "id": 3,
+    "icon": "pe-7s-medal",
+    "title": "Crafted with Perfection",
+    "details": "Artistry and Precision that elevates your space. Meticulously crafted till perfection."
+  }
+]
