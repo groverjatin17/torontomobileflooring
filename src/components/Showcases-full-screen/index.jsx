@@ -8,6 +8,7 @@ import SwiperCore, {
   Parallax,
   Mousewheel,
 } from "swiper";
+import { builder } from "@builder.io/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,14 +17,26 @@ import "swiper/css/mousewheel";
 import removeSlashFromPagination from "../../common/removeSlashFromPagination";
 
 SwiperCore.use([Navigation, Pagination, Parallax, Mousewheel]);
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 const ShowcasesFullScreen = () => {
   const [load, setLoad] = React.useState(true);
+  
   React.useEffect(() => {
     setTimeout(() => {
       setLoad(false);
-      removeSlashFromPagination()
+      removeSlashFromPagination();
     }, 1000);
+  }, []);
+
+  const [projects, setProjects] = React.useState([]);
+
+  React.useEffect(() => {
+    async function fetchContent() {
+      const projectsData = await builder.getAll("projects");
+      setProjects(projectsData);
+    }
+    fetchContent();
   }, []);
 
   const navigationPrevRef = React.useRef(null);
@@ -42,8 +55,8 @@ const ShowcasesFullScreen = () => {
               nextEl: navigationNextRef.current,
             }}
             pagination={{
-                clickable: true,
-                type: "fraction",
+              clickable: true,
+              type: "fraction",
               el: paginationRef.current,
             }}
             onBeforeInit={(swiper) => {
@@ -77,11 +90,11 @@ const ShowcasesFullScreen = () => {
             className="swiper-wrapper"
             slidesPerView={1}
           >
-            {ShowcassesFullScreenData.map((slide) => (
-              <SwiperSlide key={slide.id} className="swiper-slide">
+            {projects && projects.map((slide) => (
+              <SwiperSlide key={slide.data.firstWord} className="swiper-slide">
                 <div
                   className="bg-img valign"
-                  style={{ backgroundImage: `url(${slide.image})` }}
+                  style={{ backgroundImage: `url(${slide.data.backgroundImage})` }}
                   data-overlay-dark="4"
                 >
                   <div className="container">
@@ -89,19 +102,19 @@ const ShowcasesFullScreen = () => {
                       <div className="col-lg-10 offset-lg-1">
                         <div className="caption">
                           <h1>
-                            <Link href="/project-details2/project-details2-dark">
-                              <a>
+                            {/* <Link href="/project-details2/project-details2-dark"> */}
+                              {/* <a> */}
                                 <div
                                   className="stroke"
                                   data-swiper-parallax="-2000"
                                 >
-                                  {slide.title.first}
+                                  {slide.data.firstWord}
                                 </div>
                                 <span data-swiper-parallax="-5000">
-                                  {slide.title.second}
+                                  {slide.data.secondWord}
                                 </span>
-                              </a>
-                            </Link>
+                              {/* </a> */}
+                            {/* </Link> */}
                           </h1>
                         </div>
                       </div>

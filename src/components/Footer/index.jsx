@@ -107,7 +107,7 @@ const Footer = ({ noSubBG }) => {
           </div>
         </div>
         <div className="copyrights text-center">
-          <p>© 2012, Toronto Mobile Flooring Inc.c.</p>
+          <p>© 2012, Toronto Mobile Flooring Inc..</p>
         </div>
       </div>
     </footer>

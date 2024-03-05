@@ -6,7 +6,7 @@ const SmallFooter = () => {
       <div className="container">
         <div className="copyrights text-center mt-0">
           <p>
-            © 2012, Toronto Mobile Flooring Inc.c.
+            © 2012, Toronto Mobile Flooring Inc..
           </p>
         </div>
       </div>

@@ -10,9 +10,9 @@ import {
 } from "../../common/navbar";
 
 const Navbar = ({ lr, nr, theme }) => {
-  React.useEffect(() => {
-    handleSearch();
-  }, []);
+  // React.useEffect(() => {
+  //   handleSearch();
+  // }, []);
   return (
     <nav
       ref={nr}
@@ -20,7 +20,9 @@ const Navbar = ({ lr, nr, theme }) => {
         theme === "themeL" ? "light" : ""
       }`}
     >
-      <div className="container">
+      <div className="container" 
+        style={{ padding: "10px 0" }}
+      >
         <Link href="/">
           <a className="logo">
             {theme ? (
@@ -63,8 +65,11 @@ const Navbar = ({ lr, nr, theme }) => {
                 Products
               </span>
               <div className="dropdown-menu">
-                <Link href="/products/maple-hardwood">
-                  <a className="dropdown-item">Maple Hardwood</a>
+                <Link href="/products/solid">
+                  <a className="dropdown-item">Solid Hardwood</a>
+                </Link>
+                <Link href="/products/eng-hardwood">
+                  <a className="dropdown-item">Engineered Hardwood</a>
                 </Link>
                 <Link href="/products/vinyl">
                   <a className="dropdown-item">Premium LVP Vinyl</a>
@@ -72,6 +77,7 @@ const Navbar = ({ lr, nr, theme }) => {
                 <Link href="/products/laminate">
                   <a className="dropdown-item">Laminate</a>
                 </Link>
+
                 {/* <Link href="/home/home3-light">
                   <a className="dropdown-item">Business Startup</a>
                 </Link>
@@ -116,13 +122,13 @@ const Navbar = ({ lr, nr, theme }) => {
               </div>
             </li> */}
             <li className="nav-item">
-              <Link href="/">
-                <a className="nav-link">Home</a>
+              <Link href="/about/about-us">
+                <a className="nav-link">About</a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about/about-us">
-                <a className="nav-link">About</a>
+              <Link href="/showcase/showcase-light">
+                <a className="nav-link">Projects</a>
               </Link>
             </li>
             {/* <li className="nav-item dropdown" onClick={handleDropdown}>
@@ -156,7 +162,7 @@ const Navbar = ({ lr, nr, theme }) => {
               </Link>
             </li>
           </ul>
-          <div className="search">
+          {/* <div className="search">
             <span className="icon pe-7s-search cursor-pointer"></span>
             <div className="search-form text-center custom-font">
               <Formik
@@ -177,7 +183,7 @@ const Navbar = ({ lr, nr, theme }) => {
               </Formik>
               <span className="close pe-7s-close cursor-pointer"></span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

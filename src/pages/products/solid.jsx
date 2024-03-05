@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { builder } from "@builder.io/react";
+import React from "react";
 import LightTheme from "../../layouts/Light";
 import Navbar from "../../components/Navbar";
 import addParlx from "../../common/addParlx";
 import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
-import PortfolioTwoColumn from "../../components/maple-hardwood";
+import PortfolioTwoColumn from "../../components/vinyl";
+import { builder } from "@builder.io/react";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
@@ -16,7 +16,21 @@ const Works4Light = () => {
   const logoRef = React.useRef(null);
 
   const [pageLoaded, setPageLoaded] = React.useState(false);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    async function fetchContent() {
+      const products = await builder.getAll("product", {
+        query: {
+          data: {
+            category: "solid",
+          },
+        },
+      });
+      setProducts(products);
+    }
+    fetchContent();
+  }, []);
 
   React.useEffect(() => {
     document.querySelector("body").classList.add("menubarblack");
@@ -29,48 +43,46 @@ const Works4Light = () => {
     var navbar = navbarRef.current;
     if (window.pageYOffset > 300) {
       navbar.classList.add("nav-scroll");
-    } 
-    // else {
-    //   navbar.classList.remove("nav-scroll");
-    // }
-    // window.addEventListener("scroll", () => {
-    //   if (window.pageYOffset > 300) {
-    //     navbar.classList.add("nav-scroll");
-    //   } else {
-    //     navbar.classList.remove("nav-scroll");
-    //   }
-    // });
+    } else {
+      navbar.classList.remove("nav-scroll");
+    }
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        navbar.classList.add("nav-scroll");
+      } else {
+        navbar.classList.remove("nav-scroll");
+      }
+    });
     if (fixedHeader.current) {
       var slidHeight = fixedHeader.current.offsetHeight;
       if (MainContent.current) {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
     }
-    // window.addEventListener("load", () => {
-    //   setTimeout(() => {
-    //     if (fixedHeader.current) {
-    //       var slidHeight = fixedHeader.current.offsetHeight;
-    //       if (MainContent.current) {
-    //         MainContent.current.style.marginTop = slidHeight + "px";
-    //       }
+    
+    // if (document.readyState === "complete") {
+    //   console.log("Page already loaded");
+    //   if (fixedHeader.current) {
+    //     var slidHeight = fixedHeader.current.offsetHeight;
+    //     if (MainContent.current) {
+    //       MainContent.current.style.marginTop = slidHeight + "px";
     //     }
-    //   }, 0);
-    // });
+    //   }
+    // } else {
+    //   console.log("Page yet to be loaded");
+    // }
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        if (fixedHeader.current) {
+          var slidHeight = fixedHeader.current.offsetHeight;
+          if (MainContent.current) {
+            MainContent.current.style.marginTop = slidHeight + "px";
+          }
+        }
+      }, 0);
+    });
   }, [fixedHeader, MainContent, navbarRef]);
 
-  React.useEffect(() => {
-    async function fetchContent() {
-      const products = await builder.getAll("product", {
-        query: {
-          data: {
-            category: "Engineered Hardwood",
-          },
-        },
-      });
-      setProducts(products);
-    }
-    fetchContent();
-  }, []);
   return (
     <LightTheme>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
@@ -83,12 +95,12 @@ const Works4Light = () => {
             <div className="col-lg-9 col-md-11 static">
               <div className="capt mt-50">
                 <div className="parlx">
-                  <h2 className="custom-font">Hardwood</h2>
-                  <p>100% Canadian, handcrafted right here at home.</p>
+                  <h2 className="custom-font">Solid Hardwood</h2>
+                  <p>Crafted to endure, Hardwood's allure.</p>
                 </div>
 
                 <div className="bactxt custom-font valign">
-                  <span className="full-width">SOLID</span>
+                  <span className="full-width">HARDWOOD</span>
                 </div>
               </div>
             </div>

@@ -17,17 +17,19 @@ const NavbarFullMenu = ({ theme, lr }) => {
       >
         <div className="container-fluid">
           <div className="logo">
-            <a href="#0">
-              {theme ? (
-                theme === "light" ? (
-                  <img src={`${appData.darkLogo}`} alt="logo" />
+            <Link href="/">
+              <a>
+                {theme ? (
+                  theme === "light" ? (
+                    <img src={`${appData.darkLogo}`} alt="logo" />
+                  ) : (
+                    <img src={`${appData.lightLogo}`} alt="logo" />
+                  )
                 ) : (
                   <img src={`${appData.lightLogo}`} alt="logo" />
-                )
-              ) : (
-                <img src={`${appData.lightLogo}`} alt="logo" />
-              )}
-            </a>
+                )}
+              </a>
+            </Link>
           </div>
           <div className="menu-icon">
             <span className="icon">

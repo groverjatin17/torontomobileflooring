@@ -1311,7 +1311,7 @@ span:hover {
 
 [data-overlay-dark="4"]:before,
 [data-overlay-light="4"]:before {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 [data-overlay-dark="5"]:before,
@@ -6097,6 +6097,8 @@ header.simpl .caption .btn-curve {
   }
   .showcase-full .parallax-slider .caption h1 span {
     margin-left: 0;
+    display: block;
+    padding-left: 40px;
   }
   .showcase-carus .caption h1,
   .showcase-carus .copy-cap h1 {
