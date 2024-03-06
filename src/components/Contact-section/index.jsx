@@ -91,7 +91,7 @@ const ContactSection = () => {
                               required="required"
                             />
                             {errors.email && touched.email && (
-                              <div>{errors.email}</div>
+                              <div className="error">{errors.email}</div>
                             )}
                           </div>
                         </div>

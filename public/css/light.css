@@ -172,6 +172,7 @@ span:hover {
 
 .full-width {
   width: 100% !important;
+  overflow: hidden;
 }
 
 .main-color {
@@ -5940,6 +5941,27 @@ header.simpl .caption .btn-curve {
 
 /* ====================== [ End Footer ] ====================== */
 /* ====================== [ Start Responsive ] ====================== */
+.checkmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 0 50px 0 75px;
+}
+
+.error {
+  color: red;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.loading img {
+  max-width: 75px;
+}
 @media screen and (max-width: 991px) {
   .bg-img {
     background-position: center !important;
@@ -6527,6 +6549,16 @@ header.simpl .caption .btn-curve {
     color: #fff;
     -webkit-text-stroke: 0px #fff;
   }
+  .checkmark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  .contact-us-padding {
+    padding: 0;
+  }
 }
-
 /* ====================== [ End Responsive ] ====================== */

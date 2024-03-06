@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
-import Cursor from "../components/Cursor";
 import ScrollToTop from "../components/Scroll-to-top";
 import LoadingScreen from "../components/Loading-Screen";
 import "../styles/globals.css";
@@ -21,8 +20,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
         id="wow"
         src="/js/wow.min.js"
-      >
-      </Script>
+      ></Script>
       <Script
         strategy="beforeInteractive"
         id="splitting"
@@ -34,11 +32,19 @@ function MyApp({ Component, pageProps }) {
         id="isotope"
         src="/js/isotope.pkgd.min.js"
       ></Script>
+      <Script strategy="lazyOnload" id="initWow" src="/js/initWow.js"></Script>
       <Script
-        strategy="lazyOnload" 
-        id="initWow" 
-        src="/js/initWow.js"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-250RXMY789"
       ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-250RXMY789');
+        `}
+      </Script>
     </>
   );
 }
