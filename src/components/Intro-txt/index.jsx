@@ -1,4 +1,5 @@
 import React from "react";
+import { instagramHandle } from "../../constants";
 
 const IntroTxt = ({subBG}) => {
   return (
@@ -18,7 +19,7 @@ const IntroTxt = ({subBG}) => {
                 <a href="#0" className="icon">
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#0" className="icon">
+                <a href={instagramHandle} className="icon">
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a href="#0" className="icon">

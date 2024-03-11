@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import { Formik, Form, Field } from "formik";
+import { instagramHandle } from "../../constants";
 
 const Blog1 = () => {
   return (
@@ -85,18 +85,6 @@ const Blog1 = () => {
                             personal style.
                           </li>
                         </p>{" "}
-                        {/* <p>
-                          {" "}
-                          Another way in which ChatGPT is going to change the
-                          tech industry is by enhancing the speed and accuracy
-                          of decision-making processes. ChatGPT can process and
-                          analyze large amounts of data and provide relevant
-                          insights and recommendations, which can be useful in
-                          areas such as customer service, marketing, and product
-                          development. By automating these processes, ChatGPT
-                          can help companies save time and resources and make
-                          more informed decisions.
-                        </p> */}
                       </div>
                       <div className="quotes text-center">
                         <p>
@@ -109,7 +97,7 @@ const Blog1 = () => {
                           <a href="#0">
                             <i className="fab fa-facebook-f"></i>
                           </a>
-                          <a href="#0">
+                          <a href={instagramHandle}>
                             <i className="fab fa-instagram"></i>
                           </a>
 

@@ -53,7 +53,7 @@ const BlogDetailsLight = () => {
                 )}
                 {id == 2 && (
                   <h2>
-                    How ChatGPT is going to revolutioize the tech industry
+                    Why tiles are the best options for Bathrooms. READ MORE{" "}
                   </h2>
                 )}
                 {id == 3 && (

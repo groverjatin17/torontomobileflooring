@@ -5156,7 +5156,7 @@ header.simpl .caption .btn-curve {
   opacity: 0.8;
 }
 .blog-grid .item:hover:after {
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .blog-grid .item .cont {
   position: relative;

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import { Formik, Form, Field } from "formik";
+import { instagramHandle } from "../../constants";
 
 const Blog1 = () => {
   return (
@@ -79,7 +79,7 @@ const Blog1 = () => {
                           <a href="#0">
                             <i className="fab fa-facebook-f"></i>
                           </a>
-                          <a href="#0">
+                          <a href={instagramHandle}>
                             <i className="fab fa-instagram"></i>
                           </a>
 

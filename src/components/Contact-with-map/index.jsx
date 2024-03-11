@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import Split from "../Split";
 import { sendContactForm } from "../../../lib/api";
+import { instagramHandle } from "../../constants";
 
 const ContactWithMap = ({ theme = "dark" }) => {
   const messageRef = React.useRef(null);
@@ -146,7 +147,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
                   <a href="#0" className="icon">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#0" className="icon">
+                  <a href={instagramHandle} className="icon">
                     <i className="fab fa-instagram"></i>
                   </a>
                   <a href="#0" className="icon">

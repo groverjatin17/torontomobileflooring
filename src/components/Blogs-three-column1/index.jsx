@@ -21,7 +21,7 @@ const BlogsThreeColumn1 = ({ subBG, newHome }) => {
           <div className="col-lg-4 wow fadeInUp" data-wow-delay=".3s">
             <div
               className={`item bg-img ${newHome ? "active" : ""}`}
-              style={{ backgroundImage: "url(/img/blog/blog1.png)" }}
+              style={{ backgroundImage: "url(/img/blog/blog1.jpg)" }}
             >
               <div className="cont">
                 <Link href="/blog-details/1/">

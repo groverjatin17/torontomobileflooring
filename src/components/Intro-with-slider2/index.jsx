@@ -3,6 +3,7 @@ import introData from "../../data/sections/intro2.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import SwiperCore, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
+import { instagramHandle } from "../../constants";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -137,7 +138,7 @@ const IntroWithSlider2 = () => {
           <a href="#0">
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="#0">
+          <a href={instagramHandle}>
             <i className="fab fa-instagram"></i>
           </a>
           <a href="#0">

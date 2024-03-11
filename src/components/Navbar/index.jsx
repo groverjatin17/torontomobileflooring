@@ -20,9 +20,7 @@ const Navbar = ({ lr, nr, theme }) => {
         theme === "themeL" ? "light" : ""
       }`}
     >
-      <div className="container" 
-        style={{ padding: "10px 0" }}
-      >
+      <div className="container" style={{ padding: "10px 0" }}>
         <Link href="/">
           <a className="logo">
             {theme ? (
@@ -122,15 +120,16 @@ const Navbar = ({ lr, nr, theme }) => {
               </div>
             </li> */}
             <li className="nav-item">
-              <Link href="/about/about-us">
-                <a className="nav-link">About</a>
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link href="/showcase/showcase-light">
                 <a className="nav-link">Projects</a>
               </Link>
             </li>
+            <li className="nav-item">
+              <Link href="/about/about-us">
+                <a className="nav-link">About</a>
+              </Link>
+            </li>
+
             {/* <li className="nav-item dropdown" onClick={handleDropdown}>
               <span
                 className="nav-link dropdown-toggle"

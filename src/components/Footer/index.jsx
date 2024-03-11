@@ -2,6 +2,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import appData from "../../data/app.json";
+import { instagramHandle } from "../../constants";
 
 const Footer = ({ noSubBG }) => {
   function validateEmail(value) {
@@ -46,13 +47,12 @@ const Footer = ({ noSubBG }) => {
                   <a href="#0" className="icon">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#0" className="icon">
+                  <a href={instagramHandle} className="icon">
                     <i className="fab fa-instagram"></i>
                   </a>
                   <a href="#0" className="icon">
                     <i className="fab fa-pinterest"></i>
                   </a>
-                  
                 </div>
               </div>
             </div>
@@ -93,13 +93,13 @@ const Footer = ({ noSubBG }) => {
             <div className="insta">
               <h6 className="custom-font stit simple-btn">Instagram Post</h6>
               <div className="insta-gallary">
-                <a href="#0">
+                <a href={instagramHandle}>
                   <img src="/img/insta/1.jpg" alt="" />
                 </a>
-                <a href="#0">
+                <a href={instagramHandle}>
                   <img src="/img/insta/2.jpg" alt="" />
                 </a>
-                <a href="#0">
+                <a href={instagramHandle}>
                   <img src="/img/insta/3.jpg" alt="" />
                 </a>
               </div>

@@ -16,11 +16,7 @@ const SkillsCircle = ({ subBG, theme }) => {
     },
   };
   return (
-    <section
-      className={`skills-circle pt-50 pb-50 ${
-        subBG ? "sub-bg" : ""
-      }`}
-    >
+    <section className={`skills-circle pt-50 pb-50 ${subBG ? "sub-bg" : ""}`}>
       <div className="container">
         <div className="row">
           <div className="col-lg-7">
@@ -32,13 +28,16 @@ const SkillsCircle = ({ subBG, theme }) => {
                       <CircularProgressbar
                         value={90}
                         strokeWidth={2}
-                        text={`${90}%`}
+                        text={`${100}%`}
                         styles={cpStyle}
                       />
                     </div>
                     <div className="cont">
-                      <span>Project</span>
-                      <h6>Consulting</h6>
+                      <span>Expertise</span>
+                      <h6>
+                        Extensive knowledge, skills, and experience in the
+                        industry.
+                      </h6>
                     </div>
                   </div>
                 </div>
@@ -48,13 +47,16 @@ const SkillsCircle = ({ subBG, theme }) => {
                       <CircularProgressbar
                         value={75}
                         strokeWidth={2}
-                        text={`${75}%`}
+                        text={`${100}%`}
                         styles={cpStyle}
                       />
                     </div>
                     <div className="cont">
-                      <span>App</span>
-                      <h6>Development</h6>
+                      <span>Customer-centric approach</span>
+                      <h6>
+                        Understanding clients' needs, preferences, and budgetary
+                        constraints
+                      </h6>
                     </div>
                   </div>
                 </div>

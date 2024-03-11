@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import team1Data from "../../data/sections/team1.json";
+import { instagramHandle } from "../../constants";
 
 class Team1 extends React.Component {
   constructor(props) {
@@ -90,7 +91,7 @@ class Team1 extends React.Component {
                         <a href="#0">
                           <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#0">
+                        <a href={instagramHandle}>
                           <i className="fab fa-instagram"></i>
                         </a>
                       </div>
