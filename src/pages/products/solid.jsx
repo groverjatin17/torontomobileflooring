@@ -96,7 +96,7 @@ const Works4Light = () => {
               <div className="capt mt-50">
                 <div className="parlx">
                   <h2 className="custom-font">Solid Hardwood</h2>
-                  <p>Crafted to endure, Hardwood's allure.</p>
+                  <p>Crafted to endure, Hardwood&apos;s allure.</p>
                 </div>
 
                 <div className="bactxt custom-font valign">
