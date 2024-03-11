@@ -54,7 +54,7 @@ const SkillsCircle = ({ subBG, theme }) => {
                     <div className="cont">
                       <span>Customer-centric approach</span>
                       <h6>
-                        Understanding clients' needs, preferences, and budgetary
+                        Understanding clients&apos; needs, preferences, and budgetary
                         constraints
                       </h6>
                     </div>
