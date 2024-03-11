@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import addParlx from "../../common/addParlx";
 import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
-import PortfolioTwoColumn from "../../components/maple-hardwood";
+import PortfolioTwoColumn from "../../components/solid";
 
 const Works4Light = () => {
   const fixedHeader = React.useRef(null);
