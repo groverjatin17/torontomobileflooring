@@ -118,7 +118,7 @@ const VideoWithTestimonials = () => {
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                            Sam Edison
                           </h6>
                           <span className="author-details">
                             Owner, Colabrio
@@ -142,10 +142,10 @@ const VideoWithTestimonials = () => {
                       <div className="cont">
                         <div className="author">
                           <h6 className="author-name custom-font">
-                            Alex Regelman
+                            Pedro
                           </h6>
                           <span className="author-details">
-                            Owner, Colabrio
+                            Owner, datacamp
                           </span>
                         </div>
                       </div>
