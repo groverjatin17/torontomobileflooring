@@ -105,7 +105,7 @@ section.team.section-padding {
   overflow: hidden;
 }
 
-.price{
+.price {
   position: absolute;
   top: 0;
   right: 0;
@@ -113,4 +113,29 @@ section.team.section-padding {
   width: 80px;
   height: 80px;
   opacity: 0.8;
+}
+.ReactModalPortal {
+  position: absolute;
+  z-index: 999;
+  margin: 50px;
+  /* height: 90vh; */
+}
+
+.ReactModal__Content {
+  height: 85%;
+  margin: 50px;
+  background: white;
+  padding: 20px;
+}
+
+.ReactModal__Content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quality-floor p {
+  font-weight: 700;
+  color: white;
 }

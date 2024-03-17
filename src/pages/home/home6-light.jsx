@@ -81,7 +81,7 @@ const Homepage6 = () => {
         <ServicesTop />
         <Works />
         <Skills theme="light" />
-        {/* <ServicesBottom /> */}
+        <ServicesBottom />
         <Testimonials />
         <Clients theme="light" />
         <Blogs newHome subBG />

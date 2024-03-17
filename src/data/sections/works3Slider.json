@@ -9,9 +9,9 @@
   {
     "id": 2,
     "title": "Embrace Timeless Beauty!",
-    "secTex": "Enchanting Hardwood",
+    "secTex": "Solid Hardwood",
     "image": "/img/portfolio/curs/hardwood.jpg",
-    "slug": "/project-details/project-details-dark"
+    "slug": "/products/solid/"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "title": "Endless Possibilities",
-    "secTex": "Versatile Vinyl",
+    "secTex": "Waterproof Vinyl",
     "image": "/img/portfolio/curs/vinyl.jpg",
     "slug": "/project-details/project-details-dark"
   }

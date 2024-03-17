@@ -34,7 +34,7 @@ const AboutDark = () => {
       <Navbar nr={navbarRef} />
       <AboutHeader />
       <AboutIntro />
-      <Services4 withPadding withOutTitle />
+      {/* <Services4 withPadding withOutTitle /> */}
       <VideoWithTestimonials />
       <SkillsCircle subBG theme="dark" />
       <Team1 />

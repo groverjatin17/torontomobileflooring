@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Floor Installation",
-    "icon": "pe-7s-gleam",
-    "content": "Seamless Surfaces, Flawless Transformation"
+    "title": "WSIB Certified",
+    "icon": "/img/wsib.svg",
+    "content": "WSIB Certified and Liability Insured"
   },
   {
     "id": 2,
-    "title": "Stairs Installation",
-    "icon": "pe-7s-phone",
-    "content": "Ascend with Grace, Descend with Style"
+    "title": "NWFA",
+    "icon": "/img/nwfa.png",
+    "content": "Official member of National Wood Flooring Association"
   },
   {
     "id": 3,
-    "title": "Bathroom renovation",
-    "icon": "pe-7s-magic-wand",
-    "content": "A Refreshing Oasis, A Renewed You"
+    "title": "No VOC",
+    "icon": "/img/novoc.png",
+    "content": "VOC free product for your and your family"
   }
 ]

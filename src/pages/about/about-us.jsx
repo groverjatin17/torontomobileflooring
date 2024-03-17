@@ -38,13 +38,13 @@ const AboutDark = () => {
     <LightTheme>
       <Navbar nr={navbarRef} lr={logoRef} />
       <AboutHeader />
-      <AboutIntro />
-      <Services4 withPadding withOutTitle />
+      <AboutIntro/>
+      {/* <Services4 withPadding withOutTitle /> */}
       <VideoWithTestimonials />
       <SkillsCircle subBG theme="light" />
       <Team1 />
       <MinimalArea />
-      <Clients1 theme="light" />
+      {/* <Clients1 theme="light" /> */}
       <CallToAction theme="light" subBG />
       <Footer />
     </LightTheme>

@@ -126,7 +126,7 @@ p {
   color: #777;
   font-size: 15px;
   font-weight: 300;
-  line-height: 2;
+  /* line-height: 2; */
   margin: 0;
 }
 
@@ -2363,7 +2363,7 @@ header.simpl .caption h1 {
 }
 header.simpl .caption p {
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 700;
   margin-top: 20px;
 }
 header.simpl .caption .btn-curve {
