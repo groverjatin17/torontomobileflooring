@@ -19,7 +19,7 @@ const IntroTxt2 = () => {
             <div className="caption center mt-50 quality-floor">
               <h6>FIRST FLOORING ON WHEELS STORE IN CANADA</h6>
               <h1>Toronto Mobile Flooring</h1>
-              <p>"Quality floor, at your door."</p>
+              <p>&quot;Quality floor, at your door.&quot;</p>
               <Link href="/contact/contact-us">
                 <a className="btn-curve btn-lit mt-40">
                   <span>Know more about us</span>

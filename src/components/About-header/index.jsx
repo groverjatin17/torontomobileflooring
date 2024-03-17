@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AboutHeader = () => {
@@ -13,7 +14,10 @@ const AboutHeader = () => {
             <div className="cont text-center">
               <h1>About Us</h1>
               <div className="path">
-                <a href="/">Home</a>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+
                 <span>/</span>
                 <a href="#0" className="active">
                   About Us
