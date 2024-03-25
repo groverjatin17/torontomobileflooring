@@ -4,8 +4,8 @@ import Navbar from "../../components/Navbar";
 import addParlx from "../../common/addParlx";
 import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
-import PortfolioTwoColumn from "../../components/laminate";
 import { builder } from "@builder.io/react";
+import PortfolioTwoColumn from "../../components/Portfolio-two-column";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 

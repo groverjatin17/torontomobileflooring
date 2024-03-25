@@ -6,7 +6,6 @@ import Navbar from "../../components/Navbar";
 import Intro from "../../components/Intro-txt2";
 import Features from "../../components/Features";
 import ServicesTop from "../../components/Services5";
-import Works from "../../components/Works3-slider";
 import Skills from "../../components/Skills-circle2";
 import ServicesBottom from "../../components/Services6";
 import Testimonials from "../../components/Testimonials2";
@@ -101,7 +100,6 @@ const Homepage6 = () => {
           filterPosition="center"
           hideFilter
         />
-
         <Skills theme="light" />
         <ServicesBottom />
         <Testimonials />

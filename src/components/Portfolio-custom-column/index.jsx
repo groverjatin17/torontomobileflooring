@@ -98,7 +98,7 @@ const PortfolioCustomColumn = ({
                         {/* <Link href={item.data.href}> */}
                         {tag.tagName}
                         {/* </Link> */}
-                        {index == item.data.tags.length - 1 ? "" : ","}
+                        {index == item.data.tags.length - 1 ? "" : ", "}
                       </React.Fragment>
                     ))}
                   </span>
