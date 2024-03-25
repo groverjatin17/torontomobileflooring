@@ -10,7 +10,9 @@ const PortfolioCustomColumn = ({
   filterPosition,
   hideFilter,
   hideSectionTitle,
+  products
 }) => {
+
   const [pageLoaded, setPageLoaded] = React.useState(false);
   React.useEffect(() => {
     setPageLoaded(true);
@@ -26,11 +28,11 @@ const PortfolioCustomColumn = ({
         <div className="container">
           <div className="sec-head custom-font">
             <h6 className="wow fadeIn" data-wow-delay=".5s">
-              Portfolio
+              COLLECTION
             </h6>
             <Split>
               <h3 className="wow words chars splitting" data-splitting>
-                Our Services.
+                Products.
               </h3>
             </Split>
             <span className="tbg text-right">Portfolio</span>
@@ -62,39 +64,41 @@ const PortfolioCustomColumn = ({
           )}
 
           <div className="gallery full-width">
-            {portfolio1Data.map((item, index) => (
+            {products && products.map((item, index) => (
               <div
-                key={item.id}
+                key={item.data.id}
                 className={`${
                   column === 3
                     ? "col-lg-4 col-md-6"
                     : column === 2
                     ? "col-md-6"
                     : "col-12"
-                } items ${item.filterCategory} wow fadeInUp ${
-                  item.id === 2 && column == 3
+                } items ${item.data.filterCategory} wow fadeInUp ${
+                  item.data.id === 2 && column == 3
                     ? "lg-mr"
-                    : item.id === 1 && column == 2
+                    : item.data.id === 1 && column == 2
                     ? "lg-mr"
                     : ""
                 }`}
                 data-wow-delay=".4s"
               >
                 <div className="item-img">
-                  <Link href="/project-details2/project-details2-dark">
+                  <Link href={item.data.href}>
                     <a className="imago wow">
-                      <img src={item.image} alt="image" />
+                      <img src={item.data.image} alt="image" />
                       <div className="item-img-overlay"></div>
                     </a>
                   </Link>
                 </div>
                 <div className="cont">
-                  <h6>{item.title}</h6>
+                  <h6>{item.data.title}</h6>
                   <span>
-                    {item.tags.map((tag, index) => (
+                    {item.data.tags.map((tag, index) => (
                       <React.Fragment key={index * 3}>
-                        <Link href="/works4/works4-dark">{tag}</Link>
-                        {index == item.tags.length - 1 ? "" : ","}
+                        {/* <Link href={item.data.href}> */}
+                        {tag.tagName}
+                        {/* </Link> */}
+                        {index == item.data.tags.length - 1 ? "" : ","}
                       </React.Fragment>
                     ))}
                   </span>

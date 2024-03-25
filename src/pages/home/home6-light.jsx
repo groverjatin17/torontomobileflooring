@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 //= ================== Layout ==================//
 import LightTheme from "../../layouts/Light";
 //= ================== Components ==================//
@@ -14,12 +14,27 @@ import Clients from "../../components/Clients1";
 import Blogs from "../../components/Blogs-three-column1";
 import CallToAction from "../../components/Call-to-action";
 import Footer from "../../components/Footer";
+import { builder } from "@builder.io/react";
+
 //= ================== Page Data ==================//
 import appData from "../../data/app.json";
+import PortfolioCustomColumn from "../../components/Portfolio-custom-column";
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 const Homepage6 = () => {
   const navbarRef = useRef(null);
   const logoRef = useRef(null);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchContent() {
+      const listOfProducts = await builder.getAll("categories");
+
+      setProducts(listOfProducts);
+    }
+    fetchContent();
+  }, []);
 
   useEffect(() => {
     var navbar = navbarRef.current,
@@ -79,7 +94,14 @@ const Homepage6 = () => {
       <div className="main-content">
         <Features />
         <ServicesTop />
-        <Works />
+        {/* <Works /> */}
+        <PortfolioCustomColumn
+          products={products}
+          column={3}
+          filterPosition="center"
+          hideFilter
+        />
+
         <Skills theme="light" />
         <ServicesBottom />
         <Testimonials />
