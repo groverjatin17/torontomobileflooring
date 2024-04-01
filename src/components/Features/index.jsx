@@ -3,7 +3,7 @@ import featuresData from '../../data/sections/features.json';
 
 const Feats = () => {
   return (
-    <section className="sipm-feat section-padding">
+    <section className="sipm-feat section-padding features-mobile">
       <div className="container">
         <div className="row">
           {

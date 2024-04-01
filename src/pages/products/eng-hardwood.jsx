@@ -6,10 +6,11 @@ import addParlx from "../../common/addParlx";
 import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
 import PortfolioTwoColumn from "../../components/Portfolio-two-column";
+import Head from "next/head";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
-const Works4Light = () => {
+const EngHardwoodPage = () => {
   const fixedHeader = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
@@ -29,7 +30,7 @@ const Works4Light = () => {
     var navbar = navbarRef.current;
     if (window.pageYOffset > 300) {
       navbar.classList.add("nav-scroll");
-    } 
+    }
     // else {
     //   navbar.classList.remove("nav-scroll");
     // }
@@ -73,6 +74,9 @@ const Works4Light = () => {
   }, []);
   return (
     <LightTheme>
+      <Head>
+        <title>Engineered Hardwood | Toronto Mobile Flooring</title>
+      </Head>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header
         ref={fixedHeader}
@@ -104,4 +108,4 @@ const Works4Light = () => {
   );
 };
 
-export default Works4Light;
+export default EngHardwoodPage;

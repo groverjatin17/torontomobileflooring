@@ -229,6 +229,10 @@ span:hover {
   padding: 120px 0;
 }
 
+.section-padding-laptop {
+  padding: 120px 0;
+}
+
 .section-ptb {
   padding: 80px 0;
 }
@@ -1246,7 +1250,8 @@ span:hover {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 100vh;
   top: 0;
   left: 0;
   z-index: 1;
@@ -6449,6 +6454,15 @@ header.simpl .caption .btn-curve {
 }
 
 @media screen and (max-width: 480px) {
+
+  .features-mobile {
+    /* border: none; */
+    padding-top: 50px;
+  }
+
+  .section-padding {
+    padding: 25px 0;
+  }
   .hamenu .cont-info {
     display: none;
   }
@@ -6548,6 +6562,35 @@ header.simpl .caption .btn-curve {
     display: inline-block;
     color: #fff;
     -webkit-text-stroke: 0px #fff;
+
+    .accordion {
+      width: 100%;
+    }
+    
+    .accordion-panel {
+      margin-bottom: 10px;
+    }
+    
+    .accordion-panel__header {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .accordion-panel__header.active {
+      background-color: #e0e0e0;
+    }
+    
+    .accordion-panel__content {
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out; /* Adjust animation duration and easing as needed */
+    }
+    
+    .accordion-panel__content.open {
+      max-height: 1000px; /* Adjust maximum height for the content */
+    }
+    
   }
   .checkmark {
     display: flex;

@@ -6,10 +6,11 @@ import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
 import { builder } from "@builder.io/react";
 import PortfolioTwoColumn from "../../components/Portfolio-two-column";
+import Head from "next/head";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
-const Works4Light = () => {
+const VinylPage = () => {
   const fixedHeader = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
@@ -59,7 +60,7 @@ const Works4Light = () => {
         MainContent.current.style.marginTop = slidHeight + "px";
       }
     }
-    
+
     // if (document.readyState === "complete") {
     //   console.log("Page already loaded");
     //   if (fixedHeader.current) {
@@ -85,6 +86,9 @@ const Works4Light = () => {
 
   return (
     <LightTheme>
+      <Head>
+        <title>Luxury Vinyl Planks | Toronto Mobile Flooring</title>
+      </Head>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header
         ref={fixedHeader}
@@ -116,4 +120,4 @@ const Works4Light = () => {
   );
 };
 
-export default Works4Light;
+export default VinylPage;

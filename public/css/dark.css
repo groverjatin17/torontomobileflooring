@@ -249,6 +249,10 @@ span:hover {
   padding: 80px 0;
 }
 
+.section-padding-limited {
+  padding: 40px 0;
+}
+
 .cmd-padding {
   padding: 0 10px;
 }

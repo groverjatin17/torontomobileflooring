@@ -24,7 +24,7 @@ const Testimonials2 = () => {
   }, []);
 
   return (
-    <section className="testim-box">
+    <section className="testim-box section-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -97,7 +97,7 @@ const Testimonials2 = () => {
                   <i className="fas fa-chevron-right"></i>
                 </div>
               </div>
-              <div className="swiper-pagination custom-font" ref={paginationRef}></div>
+              {/* <div className="swiper-pagination custom-font" ref={paginationRef}></div> */}
             </div>
           </div>
         </div>

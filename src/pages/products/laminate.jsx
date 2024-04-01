@@ -6,10 +6,11 @@ import SmallFooter from "../../components/Small-footer";
 import CallToAction from "../../components/Call-to-action";
 import { builder } from "@builder.io/react";
 import PortfolioTwoColumn from "../../components/Portfolio-two-column";
+import Head from "next/head";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
-const Works4Light = () => {
+const LaminatePage = () => {
   const fixedHeader = React.useRef(null);
   const MainContent = React.useRef(null);
   const navbarRef = React.useRef(null);
@@ -73,6 +74,10 @@ const Works4Light = () => {
 
   return (
     <LightTheme>
+      <Head>
+        <title>Laminate | Toronto Mobile Flooring</title>
+      </Head>
+
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header
         ref={fixedHeader}
@@ -84,9 +89,7 @@ const Works4Light = () => {
               <div className="capt mt-50">
                 <div className="parlx">
                   <h2 className="custom-font">LAMINATE</h2>
-                  <p>
-                  Style meets durability in our quality laminate floors
-                  </p>
+                  <p>Style meets durability in our quality laminate floors</p>
                 </div>
 
                 <div className="bactxt custom-font valign">
@@ -106,4 +109,4 @@ const Works4Light = () => {
   );
 };
 
-export default Works4Light;
+export default LaminatePage;

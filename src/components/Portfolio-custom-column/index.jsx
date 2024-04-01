@@ -23,7 +23,7 @@ const PortfolioCustomColumn = ({
     }
   }, [pageLoaded]);
   return (
-    <section className="portfolio section-padding pb-70">
+    <section className="portfolio section-padding">
       {!hideSectionTitle && (
         <div className="container">
           <div className="sec-head custom-font">
@@ -35,7 +35,7 @@ const PortfolioCustomColumn = ({
                 Products.
               </h3>
             </Split>
-            <span className="tbg text-right">Portfolio</span>
+            <span className="tbg text-right">PREMIUM</span>
           </div>
         </div>
       )}
