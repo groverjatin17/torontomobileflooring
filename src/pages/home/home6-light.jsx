@@ -13,6 +13,7 @@ import Clients from "../../components/Clients1";
 import Blogs from "../../components/Blogs-three-column1";
 import CallToAction from "../../components/Call-to-action";
 import Footer from "../../components/Footer";
+import Accordion from "../../components/Accordion";
 import { builder } from "@builder.io/react";
 
 //= ================== Page Data ==================//
@@ -93,18 +94,19 @@ const Homepage6 = () => {
       <div className="main-content">
         <Features />
         <ServicesTop />
-        {/* <Works /> */}
+
         <PortfolioCustomColumn
           products={products}
           column={3}
           filterPosition="center"
           hideFilter
         />
-        <Skills theme="light" />
         <ServicesBottom />
         <Testimonials />
         <Clients theme="light" />
         <Blogs newHome subBG />
+        <Skills theme="light" />
+
         <CallToAction theme="light" img="/img/pattern-light.png" />
         <Footer noSubBG />
       </div>

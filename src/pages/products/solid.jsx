@@ -88,6 +88,19 @@ const SolidHardwoodPage = () => {
     <LightTheme>
       <Head>
         <title>Solid Hardwood | Toronto Mobile Flooring</title>
+        <meta
+          name="description"
+          content="Explore our top-quality solid hardwood products, including flooring, furniture, and more. Our extensive collection features durable and stylish wood options such as oak, maple, and cherry. Enhance your home or commercial space with timeless beauty and exceptional craftsmanship. Shop now for the best selection of hardwood products at competitive prices."
+        />
+        <meta
+          name="keywords"
+          content="solid hardwood floors, durable flooring, timeless beauty, oak hardwood, maple hardwood, cherry hardwood, walnut hardwood, Canadian hardwood floors, 100% Canadian, high-quality wood, natural warmth, long-lasting, elegant flooring, sustainable materials"
+        />
+        <meta
+          name="keywords"
+          content="mobile flooring, floor on wheels, store at your door, floor at door, floor at home, flooring samples, in-home consultation, floor selection, convenient flooring, flooring options, home improvement, flooring solutions, expert installation, quality materials"
+        />
+        <meta name="robots" content="index, follow" />
       </Head>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header

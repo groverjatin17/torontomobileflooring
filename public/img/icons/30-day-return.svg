@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72.131" height="70.703" viewBox="0 0 72.131 70.703">
+                        <defs>
+                            <clipPath id="clip-path-day">
+                                <path id="Path_1710" data-name="Path 1710" d="M11.109,9.427,65.358,0l3.351,67.2L0,66.042Z" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Group_10706" data-name="Group 10706" transform="translate(-1390.969 -395.148)">
+                            <g id="Group_10653" data-name="Group 10653" transform="translate(1390.969 395.148)">
+                                <g id="Mask_Group_310" data-name="Mask Group 310" transform="translate(0 3.596) rotate(-3)" clip-path="url(#clip-path-day)">
+                                    <path id="Path_1708" data-name="Path 1708" d="M8.489,5.289A25.8,25.8,0,0,1,44.646,10.15c4.311,5.65,5.87,13.693,5,20.223A25.8,25.8,0,0,1,0,32.516" transform="translate(11.697 10.015)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+                                    <path id="Path_1709" data-name="Path 1709" d="M0,5.722,4.47,0,4.8,1.6,5.861.793a2.319,2.319,0,0,0,.683.88l-1.025.782,1.208.759Z" transform="translate(14.262 13.866)"/>
+                                </g>
+                            </g>
+                            <g id="Group_10654" data-name="Group 10654" transform="translate(1415.085 413.67)">
+                                <g id="Benefit_1" data-name="Benefit 1" transform="translate(0 0)" style="mix-blend-mode: normal;isolation: isolate">
+                                    <text id="_30" data-name="30" transform="translate(13 20)" font-size="22" font-family="LucidaBright, Lucida Bright" style="mix-blend-mode: normal;isolation: isolate"><tspan x="-13" y="0">30</tspan></text>
+                                </g>
+                            </g>
+                            <g id="Group_10655" data-name="Group 10655" transform="translate(1415.085 435.866)">
+                                <g id="Benefit_1-2" data-name="Benefit 1" transform="translate(0 0)" style="mix-blend-mode: normal;isolation: isolate">
+                                    <text id="DAY" transform="translate(13 10)" font-size="11" font-family="LucidaBright-Demi, Lucida Bright" font-weight="300" style="mix-blend-mode: normal;isolation: isolate"><tspan x="-12" y="0">DAY</tspan></text>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>

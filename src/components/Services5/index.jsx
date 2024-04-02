@@ -11,7 +11,7 @@ const Services5 = () => {
   }, []);
 
   return (
-    <section className="simpl-intro section-padding">
+    <section className="simpl-intro skills-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-5 offset-lg-1 md-mb50">

@@ -3,6 +3,29 @@ import Link from "next/link";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import skills from "../../data/sections/skills-circle.json";
+import Accordion from "../Accordion";
+
+const panels = [
+  {
+    label: "Pay 25% Now, Get Your Floor Later",
+    content:
+      "We’ll store your floor for up to three months, for free. Whether you’re mid-renovation or moving houses, your floor will be ready when you are! ",
+    iconPath: "/img/icons/warehouse-pickup.svg",
+    alt: "warehouse pickup icon",
+  },
+  {
+    label: "30-Day Hassle Free Returns",
+    content: "You’ll have 30 calendar days to return 10% of excess boxes.",
+    iconPath: "/img/icons/30-day-return.svg",
+    alt: "30 day return icon",
+  },
+  {
+    label: "Choose Your Delivery Date",
+    content: "Pick a convenient day to receive your order.",
+    iconPath: "/img/icons/truck-delivery.svg",
+    alt: "delivery truck icon",
+  },
+];
 
 const SkillsCircle2 = ({ theme }) => {
   const cpStyle = {
@@ -28,15 +51,15 @@ const SkillsCircle2 = ({ theme }) => {
     <section className="skills-circle section-padding">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5">
+          <div className="col-lg-5 flexiti">
             <div className="content md-mb50">
               <div className="sub-title">
-                <h6>Amazing design services</h6>
+                <h6>Frequently Asked Questions</h6>
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-              <h3 className="mb-15 fw-700">
+              {/* <h3 className="mb-15 fw-700">
                 Where quality meets Craftsmanship!!
               </h3>
               <p>
@@ -51,7 +74,8 @@ const SkillsCircle2 = ({ theme }) => {
                 >
                   <span>Discover Us</span>
                 </a>
-              </Link>
+              </Link> */}
+              <Accordion panels={panels} />
             </div>
           </div>
           <div className="col-lg-6 offset-lg-1 valign">
@@ -60,15 +84,14 @@ const SkillsCircle2 = ({ theme }) => {
                 {skills.map((skill, index) => (
                   <div className="col-md-6" key={index}>
                     <div
-                      className="item simpl wow fadeInLeft sm-mb50"
+                      className=" flexiti"
                       data-wow-delay=".6"
                     >
-                      <div className="skill" data-value={skill.value / 100}>
-                        <CircularProgressbar
-                          value={skill.value}
-                          strokeWidth={2}
-                          text={`${skill.value}%`}
-                          styles={cpStyle}
+                      <div data-value={skill.value / 100}>
+                        <img
+                          src={skill.imagePath}
+                          alt={skill.altText}
+                          style={{ height: "250px" }}
                         />
                       </div>
                       <div className="cont">

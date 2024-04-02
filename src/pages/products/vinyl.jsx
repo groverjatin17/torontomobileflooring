@@ -88,6 +88,19 @@ const VinylPage = () => {
     <LightTheme>
       <Head>
         <title>Luxury Vinyl Planks | Toronto Mobile Flooring</title>
+        <meta
+          name="description"
+          content="Explore our collection of luxury vinyl planks, designed for commercial-grade durability and style. Our scratch-proof and dent-proof vinyl floors feature click-lock technology for easy installation. Enjoy the benefits of 100% waterproof flooring that is also pet-friendly, making it perfect for any space. Upgrade to our premium vinyl floors for lasting beauty and functionality."
+        />
+        <meta
+          name="keywords"
+          content="luxury vinyl floors, durable flooring, waterproof luxury vinyl, scratch resistant, pet friendly flooring, wood look vinyl, tile look vinyl, commercial grade vinyl, easy maintenance, vinyl planks, vinyl tiles, embossed texture"
+        />
+        <meta
+          name="keywords"
+          content="mobile flooring, floor on wheels, store at your door, floor at door, floor at home, flooring samples, in-home consultation, floor selection, convenient flooring, flooring options, home improvement, flooring solutions, expert installation, quality materials"
+        />
+        <meta name="robots" content="index, follow" />
       </Head>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header

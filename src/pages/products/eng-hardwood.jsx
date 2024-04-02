@@ -76,6 +76,19 @@ const EngHardwoodPage = () => {
     <LightTheme>
       <Head>
         <title>Engineered Hardwood | Toronto Mobile Flooring</title>
+        <meta
+          name="description"
+          content="Discover our premium collection of engineered hardwood products, including versatile flooring options and durable furniture pieces. 100% Canadian Engineered hardwood floors combines the natural beauty of wood with enhanced stability, making it ideal for a wide range of interior designs. Explore our selection of oak, hickory, maple and walnut engineered hardwood for a timeless and sophisticated look in your home or commercial space. "
+        />
+        <meta
+          name="keywords"
+          content="engineered hardwood floors, durable flooring, engineered wood, Canadian engineered hardwood, oak engineered hardwood, maple engineered hardwood, hickory engineered hardwood, walnut engineered hardwood, sustainable flooring, easy installation, moisture resistant, engineered wood planks, Canadian market"
+        />
+        <meta
+          name="keywords"
+          content="mobile flooring, floor on wheels, store at your door, floor at door, floor at home, flooring samples, in-home consultation, floor selection, convenient flooring, flooring options, home improvement, flooring solutions, expert installation, quality materials"
+        />
+        <meta name="robots" content="index, follow" />
       </Head>
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />
       <header

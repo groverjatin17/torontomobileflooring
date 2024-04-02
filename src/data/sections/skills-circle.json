@@ -2,11 +2,15 @@
   {
     "value": 100,
     "title": "Expertise",
-    "details": "Extensive knowledge, skills, and experience in the industry."
+    "details": "Extensive knowledge, skills, and experience in the industry.",
+    "imagePath": "/img/intro/satisfaction.png",
+    "altText": "satisfaction image"
   },
   {
     "value": 100,
     "title": "Customer-centric approach",
-    "details": "Understanding clients&apos; needs, preferences, and budgetary constraints"
+    "details": "Understanding clients&apos; needs, preferences, and budgetary constraints",
+    "imagePath": "/img/intro/premium_quality.png",
+    "altText": "premium quality image"
   }
 ]

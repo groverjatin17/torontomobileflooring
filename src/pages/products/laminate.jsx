@@ -76,6 +76,15 @@ const LaminatePage = () => {
     <LightTheme>
       <Head>
         <title>Laminate | Toronto Mobile Flooring</title>
+        <meta
+          name="description"
+          content="Discover the latest in laminate floors with our sale on high-quality products featuring German technology. Our waterproof and pet-friendly laminate flooring options offer durability and style for any space. Explore a wide range of designs and finishes, from classic oak to modern grey tones, perfect for residential and commercial use. Upgrade your floors today with our top-rated laminate options."
+        />
+        <meta
+          name="keywords"
+          content="laminate floors, durable flooring, hardwood look laminate, oak laminate, maple laminate, cherry laminate, walnut laminate, scratch resistant, water resistant, easy maintenance, laminate wood planks, embossed texture, laminate flooring types"
+        />
+        <meta name="robots" content="index, follow" />
       </Head>
 
       <Navbar nr={navbarRef} lr={logoRef} theme="themeL" />

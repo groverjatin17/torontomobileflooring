@@ -6454,7 +6454,6 @@ header.simpl .caption .btn-curve {
 }
 
 @media screen and (max-width: 480px) {
-
   .features-mobile {
     /* border: none; */
     padding-top: 50px;
@@ -6462,6 +6461,10 @@ header.simpl .caption .btn-curve {
 
   .section-padding {
     padding: 25px 0;
+  }
+
+  .skills-padding {
+    margin: 30px 0;
   }
   .hamenu .cont-info {
     display: none;
@@ -6562,35 +6565,6 @@ header.simpl .caption .btn-curve {
     display: inline-block;
     color: #fff;
     -webkit-text-stroke: 0px #fff;
-
-    .accordion {
-      width: 100%;
-    }
-    
-    .accordion-panel {
-      margin-bottom: 10px;
-    }
-    
-    .accordion-panel__header {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 10px;
-      cursor: pointer;
-    }
-    
-    .accordion-panel__header.active {
-      background-color: #e0e0e0;
-    }
-    
-    .accordion-panel__content {
-      overflow: hidden;
-      transition: max-height 0.5s ease-in-out; /* Adjust animation duration and easing as needed */
-    }
-    
-    .accordion-panel__content.open {
-      max-height: 1000px; /* Adjust maximum height for the content */
-    }
-    
   }
   .checkmark {
     display: flex;
@@ -6605,3 +6579,64 @@ header.simpl .caption .btn-curve {
   }
 }
 /* ====================== [ End Responsive ] ====================== */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-panel {
+  /* margin-bottom: 10px; */
+  background-color: white;
+  border-top: 1px solid grey;
+}
+.accordion-panel:last-child {
+  border-bottom: 1px solid grey;
+}
+
+.accordion-panel__header {
+  /* background-color: #f0f0f0; */
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.accordion-title-icon  {
+  width: 48px;
+}
+
+.accordion-title-arrow  {
+  width: 24px;
+}
+
+.accordion-panel__header.active {
+  /* background-color: #e0e0e0; */
+}
+
+.accordion-panel__content {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, margin-bottom 0.5s linear ; /* Adjust animation duration and easing as needed */
+  /* transition: margin-bottom 0.5s ease-in-out;  */
+  padding-left: 70px;
+}
+
+.accordion-panel__content.open {
+  max-height: 100px; /* Adjust maximum height for the content */
+  margin-bottom: 20px;
+}
+
+.flexiti {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
