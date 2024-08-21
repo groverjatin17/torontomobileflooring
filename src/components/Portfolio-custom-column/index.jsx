@@ -126,7 +126,7 @@ const PortfolioCustomColumn = ({
                   //     ? "lg-mr"
                   //     : ""
                   // }`}
-                  className="col-lg-4 col-md-6 items wow fadeInUp lg-mr"
+                  className="col-lg-4 col-md-6 items wow fadeInUp"
                   data-wow-delay=".4s"
                 >
                   <div className="item-img">
