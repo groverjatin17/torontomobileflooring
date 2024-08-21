@@ -94,13 +94,15 @@ const Homepage6 = () => {
       <div className="main-content">
         <Features />
         <ServicesTop />
+        {products.length && (
+          <PortfolioCustomColumn
+            products={products}
+            column={3}
+            filterPosition="center"
+            hideFilter
+          />
+        )}
 
-        <PortfolioCustomColumn
-          products={products}
-          column={3}
-          filterPosition="center"
-          hideFilter
-        />
         <ServicesBottom />
         <Testimonials />
         <Clients theme="light" />
