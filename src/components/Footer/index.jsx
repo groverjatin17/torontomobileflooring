@@ -37,7 +37,7 @@ const Footer = ({ noSubBG }) => {
                     <span>Address : </span> London, Ontario
                   </li>
                   <li>
-                    <span>Phone : </span> +1 (226) 780-7938
+                    <span>Phone : </span> +1 (226) 499-5290
                   </li>
                 </ul>
               </div>

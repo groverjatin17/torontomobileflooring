@@ -129,7 +129,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
                   <h5>
                     <a href="#0">info@torontofloors.com</a>
                   </h5>
-                  <h5>+1 (226) 780-7938</h5>
+                  <h5>+1 (226) 499-5290</h5>
                 </div>
                 <Split>
                   <h3 className="custom-font wow" data-splitting>
