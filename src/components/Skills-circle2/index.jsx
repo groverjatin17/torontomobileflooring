@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -88,10 +89,11 @@ const SkillsCircle2 = ({ theme }) => {
                       data-wow-delay=".6"
                     >
                       <div data-value={skill.value / 100}>
-                        <img
+                        <Image
                           src={skill.imagePath}
                           alt={skill.altText}
-                          style={{ height: "250px" }}
+                          width={250}
+                          height={250}
                         />
                       </div>
                       <div className="cont">

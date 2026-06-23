@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import servicesData from "../../data/sections/services6.json";
 
 const Services6 = () => {
@@ -24,7 +25,12 @@ const Services6 = () => {
                 <span
                   style={{ margin: "10px 0 20px 0", height: "60px" }}
                 >
-                  <img src={service.icon} style={{height: '100%'}}/>
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={60}
+                    height={60}
+                  />
                 </span>
                 {/* <h6>{service.title}</h6> */}
                 <p>{service.content}</p>

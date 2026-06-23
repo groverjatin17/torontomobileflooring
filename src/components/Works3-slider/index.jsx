@@ -75,23 +75,17 @@ const Works3Slider = () => {
             >
               {slides.map((slide) => (
                 <SwiperSlide key={slide.id}>
-                  <Link href={slide.slug}>
-                    <div className="content wow fadeInUp" data-wow-delay=".3s">
+                  <Link href={slide.slug} passHref>
+                    <a className="content wow fadeInUp" data-wow-delay=".3s">
                       <div
                         className="item-img bg-img wow imago"
                         style={{ backgroundImage: `url('${slide.image}')` }}
                       ></div>
                       <div className="cont">
-                        <h6>
-                          <a href="#0">{slide.title}</a>
-                        </h6>
-                        <h4>
-                          {/* <Link href={slide.slug}> */}
-                          <a>{slide.secTex}</a>
-                          {/* </Link> */}
-                        </h4>
+                        <h6>{slide.title}</h6>
+                        <h4>{slide.secTex}</h4>
                       </div>
-                    </div>
+                    </a>
                   </Link>
                 </SwiperSlide>
               ))}

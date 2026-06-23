@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 // import './Accordion.css'; // Import CSS file for styles (create your own styles)
 
 const Accordion = ({ panels }) => {
@@ -20,20 +21,24 @@ const Accordion = ({ panels }) => {
           >
             <div className="accordion-title">
               <div className="accordion-title-icon">
-                <img src={panel.iconPath} alt={panel.alt} />
+                <Image src={panel.iconPath} alt={panel.alt} width={24} height={24} />
               </div>
               {panel.label}
             </div>
             <div className="accordion-title-arrow">
               {activeIndex === index ? (
-                <img
+                <Image
                   src="/img/icons/chevron-up-solid.svg"
                   alt="chevron up icon"
+                  width={18}
+                  height={18}
                 />
               ) : (
-                <img
+                <Image
                   src="/img/icons/chevron-down-solid.svg"
                   alt="chevron down icon"
+                  width={18}
+                  height={18}
                 />
               )}
             </div>

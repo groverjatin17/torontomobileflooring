@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Formik, Form, Field } from "formik";
 import Split from "../Split";
 import { sendContactForm } from "../../../lib/api";
@@ -26,7 +27,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
             <div className="col-lg-6">
               {isLoading ? (
                 <div className="loading">
-                  <img src="/img/loading.gif" alt="loading" />
+                  <Image src="/img/loading.gif" alt="loading" width={48} height={48} />
                 </div>
               ) : !isSubmitted ? (
                 <div className="form md-mb50">
@@ -112,7 +113,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
                 </div>
               ) : (
                 <div className="checkmark">
-                  <img src="/img/checkmark.png" alt="checkmark" />
+                  <Image src="/img/checkmark.png" alt="checkmark" width={72} height={72} />
                   <p> Message Sent Successfully</p>
                 </div>
               )}
