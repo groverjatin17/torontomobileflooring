@@ -139,3 +139,25 @@ section.team.section-padding {
   font-weight: 700;
   color: white;
 }
+
+.portfolio .gallery.portfolio-grid .items {
+  position: relative;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+.portfolio-custom-column .gallery .items .item-img {
+  aspect-ratio: 4 / 5;
+}
+
+.portfolio-custom-column .gallery .items .item-img > a {
+  display: block;
+  height: 100%;
+}
+
+.portfolio-custom-column .gallery .items .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
