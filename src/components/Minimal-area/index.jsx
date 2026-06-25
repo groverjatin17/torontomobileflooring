@@ -20,7 +20,7 @@ const MinimalArea = () => {
               <img
                 className="thumparallax-down"
                 src="/img/min-area.jpg"
-                alt=""
+                alt="Modern mobile flooring showroom"
               />
             </div>
           </div>

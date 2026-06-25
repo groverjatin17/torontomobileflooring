@@ -11,7 +11,7 @@ const Blog1 = () => {
           <div className="col-lg-11">
             <div className="post">
               <div className="img">
-                <img src="/img/blog/blog2.jpg" alt="" />
+                <img src="/img/blog/blog2.jpg" alt="Bathroom tile design blog feature image" />
               </div>
               <div className="content pt-20">
                 <div className="row justify-content-center">

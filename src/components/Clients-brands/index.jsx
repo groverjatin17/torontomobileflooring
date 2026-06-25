@@ -46,7 +46,7 @@ const ClientsBrands = ({ subBG, theme }) => {
         >
           {ClientsBrandsData.map((item, index) => (
             <div className="brands" key={item.id}>
-              <h2 style={{ display: "none" }}> &nbsp; </h2>
+              <div style={{ display: "none" }}> &nbsp; </div>
               <div
                 className="item"
                 data-wow-delay={
@@ -72,7 +72,7 @@ const ClientsBrands = ({ subBG, theme }) => {
                 <div className="img">
                   <img
                     src={theme == "dark" ? item.darkImage : item.lightImage}
-                    alt=""
+                    alt={`Logo for ${item.url}`}
                   />
                 </div>
                 <Split>

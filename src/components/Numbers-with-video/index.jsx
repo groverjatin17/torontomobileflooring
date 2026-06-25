@@ -96,7 +96,7 @@ const NumbersWithVideo = ({ theme = "dark" }) => {
                   </div>
                   <div className="wow imago">
                     <div className="img">
-                      <img src="/img/vid.jpg" alt="" />
+                      <img src="/img/vid.jpg" alt="Video thumbnail for flooring showcase" />
                     </div>
                     <div className="vid-icon">
                       <a

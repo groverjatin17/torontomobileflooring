@@ -16,7 +16,7 @@ const Services5 = () => {
         <div className="row">
           <div className="col-lg-5 offset-lg-1 md-mb50">
             <div className="img">
-              <img src="/img/intro/planning1.jpg" alt="" />
+              <img src="/img/intro/planning1.jpg" alt="Video preview for planning workflow" />
               <div className="vid-icon">
                 <a
                   className="vid"

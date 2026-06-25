@@ -81,7 +81,7 @@ const BlogsTwoColumnSlider = () => {
                       </h6>
                       <div className="btn-more custom-font">
                         <Link href="/blog-details/blog-details-light">
-                          <a className="simple-btn">Read More</a>
+                          <a className="simple-btn">Read the full blog post</a>
                         </Link>
                       </div>
                     </div>
@@ -118,7 +118,7 @@ const BlogsTwoColumnSlider = () => {
                       </h6>
                       <div className="btn-more custom-font">
                         <Link href="/blog-details/blog-details-light">
-                          <a className="simple-btn">Read More</a>
+                          <a className="simple-btn">Read the full blog post</a>
                         </Link>
                       </div>
                     </div>
@@ -155,7 +155,7 @@ const BlogsTwoColumnSlider = () => {
                       </h6>
                       <div className="btn-more custom-font">
                         <Link href="/blog-details/blog-details-light">
-                          <a className="simple-btn">Read More</a>
+                          <a className="simple-btn">Read the full blog post</a>
                         </Link>
                       </div>
                     </div>
@@ -192,7 +192,7 @@ const BlogsTwoColumnSlider = () => {
                       </h6>
                       <div className="btn-more custom-font">
                         <Link href="/blog-details/blog-details-light">
-                          <a className="simple-btn">Read More</a>
+                          <a className="simple-btn">Read the full blog post</a>
                         </Link>
                       </div>
                     </div>

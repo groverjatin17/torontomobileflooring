@@ -25,7 +25,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
               data-wow-delay=".3s"
             >
               <div className="img">
-                <img src="/img/blog/1.jpg" alt="" />
+                <img src="/img/blog/1.jpg" alt="Blog post thumbnail" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">
@@ -53,7 +53,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/blog-details-light">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read more about this article</a>
                   </Link>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
               data-wow-delay=".5s"
             >
               <div className="img">
-                <img src="/img/blog/2.jpg" alt="" />
+                <img src="/img/blog/2.jpg" alt="Blog post thumbnail" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">
@@ -92,7 +92,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/blog-details-light">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read more about this article</a>
                   </Link>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
           <div className="col-lg-4">
             <div className="item list wow fadeInUp" data-wow-delay=".8s">
               <div className="img">
-                <img src="/img/blog/3.jpg" alt="" />
+                <img src="/img/blog/3.jpg" alt="Blog post thumbnail" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">
@@ -128,7 +128,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/blog-details-light">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read more about this article</a>
                   </Link>
                 </div>
               </div>

@@ -48,7 +48,7 @@ const BlogsThreeColumn1 = ({ subBG, newHome }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/1/">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read the full blog post</a>
                   </Link>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const BlogsThreeColumn1 = ({ subBG, newHome }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/2/">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read the full blog post</a>
                   </Link>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const BlogsThreeColumn1 = ({ subBG, newHome }) => {
                 </h6>
                 <div className="btn-more custom-font">
                   <Link href="/blog-details/3/">
-                    <a className="simple-btn">Read More</a>
+                    <a className="simple-btn">Read the full blog post</a>
                   </Link>
                 </div>
               </div>

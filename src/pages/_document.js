@@ -23,6 +23,7 @@ class MyDocument extends Document {
           />
           <meta name="author" content="" />
           <link rel="shortcut icon" href="/img/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/img/toronto-black.png" />
           {/* Google Fonts */}
           <link
             href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"

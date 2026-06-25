@@ -9,7 +9,7 @@ const ProjectDetailsVideo = ({videoBackground, videoId, videoType}) => {
     }, []);
     return (
       <section>
-        <h2 style={{display: 'none'}}> &nbsp; </h2>
+        <div style={{ display: 'none' }}> &nbsp; </div>
         <div className="container-fluid">
           <div
             className="video-wrapper section-padding bg-img parallaxie valign"

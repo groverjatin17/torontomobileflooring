@@ -92,7 +92,7 @@ class Testimonials1 extends React.Component {
                           <>
                             <div className="lxleft">
                               <div className="img">
-                                <img src="/img/clients/1.jpg" alt="" />
+                                <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                               </div>
                             </div>
                             <div className="fxright">
@@ -107,7 +107,7 @@ class Testimonials1 extends React.Component {
                         ) : (
                           <>
                             <div className="img">
-                              <img src="/img/clients/1.jpg" alt="" />
+                              <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                             </div>
                             <h6 className="author-name custom-font">
                             Ashish Kumar
@@ -135,7 +135,7 @@ class Testimonials1 extends React.Component {
                           <>
                             <div className="lxleft">
                               <div className="img">
-                                <img src="/img/clients/1.jpg" alt="" />
+                                <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                               </div>
                             </div>
                             <div className="fxright">
@@ -150,7 +150,7 @@ class Testimonials1 extends React.Component {
                         ) : (
                           <>
                             <div className="img">
-                              <img src="/img/clients/1.jpg" alt="" />
+                              <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                             </div>
                             <h6 className="author-name custom-font">
                             Harry Potter
@@ -178,7 +178,7 @@ class Testimonials1 extends React.Component {
                           <>
                             <div className="lxleft">
                               <div className="img">
-                                <img src="/img/clients/1.jpg" alt="" />
+                                <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                               </div>
                             </div>
                             <div className="fxright">
@@ -193,7 +193,7 @@ class Testimonials1 extends React.Component {
                         ) : (
                           <>
                             <div className="img">
-                              <img src="/img/clients/1.jpg" alt="" />
+                              <img src="/img/clients/1.jpg" alt="Client testimonial portrait" />
                             </div>
                             <h6 className="author-name custom-font">
                               Alex Regelman

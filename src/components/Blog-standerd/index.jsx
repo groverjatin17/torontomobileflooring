@@ -13,7 +13,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b1.jpg" alt="" />
+                      <img src="/img/blog/b1.jpg" alt="Blog post image about flooring solutions" />
                     </a>
                   </Link>
                 </div>
@@ -42,7 +42,7 @@ const BlogStanderd = () => {
                         these properties are connected.
                       </p>
                       <Link href="/blog-details/blog-details-light">
-                        <a className="simple-btn mt-30">Read More</a>
+                        <a className="simple-btn mt-30">Read more about this blog post</a>
                       </Link>
                     </div>
                   </div>
@@ -52,7 +52,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b2.jpg" alt="" />
+                      <img src="/img/blog/b2.jpg" alt="Blog post image highlighting flooring design" />
                     </a>
                   </Link>
                 </div>
@@ -83,7 +83,7 @@ const BlogStanderd = () => {
                         these properties are connected.
                       </p>
                       <Link href="/blog-details/blog-details-light">
-                        <a className="simple-btn mt-30">Read More</a>
+                        <a className="simple-btn mt-30">Read more about this blog post</a>
                       </Link>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b3.jpg" alt="" />
+                      <img src="/img/blog/b3.jpg" alt="Blog image about home flooring" />
                     </a>
                   </Link>
                 </div>
@@ -124,7 +124,7 @@ const BlogStanderd = () => {
                         these properties are connected.
                       </p>
                       <Link href="/blog-details/blog-details-light">
-                        <a className="simple-btn mt-30">Read More</a>
+                        <a className="simple-btn mt-30">Read more about this blog post</a>
                       </Link>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b4.jpg" alt="" />
+                      <img src="/img/blog/b4.jpg" alt="Blog image about design trends" />
                     </a>
                   </Link>
                 </div>
@@ -165,7 +165,7 @@ const BlogStanderd = () => {
                         these properties are connected.
                       </p>
                       <Link href="/blog-details/blog-details-light">
-                        <a className="simple-btn mt-30">Read More</a>
+                        <a className="simple-btn mt-30">Read more about this blog post</a>
                       </Link>
                     </div>
                   </div>

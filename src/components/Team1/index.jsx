@@ -82,7 +82,7 @@ class Team1 extends React.Component {
                     key={item.id}
                   >
                     <div className="img wow imago">
-                      <img src={item.image} alt="" />
+                      <img src={item.image} alt={`Photo of ${item.name}`} />
                     </div>
                     <div className="info">
                       <h5>{item.name}</h5>
