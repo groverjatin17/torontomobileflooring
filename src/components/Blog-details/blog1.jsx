@@ -11,7 +11,7 @@ const Blog1 = () => {
           <div className="col-lg-11">
             <div className="post">
               <div className="img">
-                <img src="/img/blog/blog1.jpg" alt="Hardwood flooring blog feature image" />
+                <img src="/img/blog/blog1.jpg" alt="Canadian hardwood types: Maple, Oak, Cherry, Walnut, and Birch flooring options" />
               </div>
               <div className="content pt-20">
                 <div className="row justify-content-center">

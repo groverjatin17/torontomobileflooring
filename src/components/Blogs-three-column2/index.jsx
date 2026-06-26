@@ -25,7 +25,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
               data-wow-delay=".3s"
             >
               <div className="img">
-                <img src="/img/blog/1.jpg" alt="Blog post thumbnail" />
+                <img src="/img/blog/1.jpg" alt="Blog article preview about flooring trends and design tips" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">
@@ -65,7 +65,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
               data-wow-delay=".5s"
             >
               <div className="img">
-                <img src="/img/blog/2.jpg" alt="Blog post thumbnail" />
+                <img src="/img/blog/2.jpg" alt="Blog article preview about flooring trends and design tips" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">
@@ -101,7 +101,7 @@ const BlogsThreeColumn2 = ({ subBG }) => {
           <div className="col-lg-4">
             <div className="item list wow fadeInUp" data-wow-delay=".8s">
               <div className="img">
-                <img src="/img/blog/3.jpg" alt="Blog post thumbnail" />
+                <img src="/img/blog/3.jpg" alt="Blog article preview about flooring trends and design tips" />
               </div>
               <div className="cont">
                 <Link href="/blog/blog-dark">

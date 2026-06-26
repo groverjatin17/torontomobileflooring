@@ -3,7 +3,7 @@ import Image from "next/image";
 // import './Accordion.css'; // Import CSS file for styles (create your own styles)
 
 const Accordion = ({ panels }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const togglePanel = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));

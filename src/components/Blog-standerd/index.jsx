@@ -13,7 +13,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b1.jpg" alt="Blog post image about flooring solutions" />
+                      <img src="/img/blog/b1.jpg" alt="Hardwood flooring solutions and Canadian wood species blog post" />
                     </a>
                   </Link>
                 </div>
@@ -52,7 +52,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b2.jpg" alt="Blog post image highlighting flooring design" />
+                      <img src="/img/blog/b2.jpg" alt="Blog article about tile flooring installation and bathroom renovation tips" />
                     </a>
                   </Link>
                 </div>
@@ -93,7 +93,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b3.jpg" alt="Blog image about home flooring" />
+                      <img src="/img/blog/b3.jpg" alt="Blog article covering hardwood, laminate, and luxury vinyl flooring options" />
                     </a>
                   </Link>
                 </div>
@@ -134,7 +134,7 @@ const BlogStanderd = () => {
                 <div className="img">
                   <Link href="/blog-details/blog-details-light">
                     <a>
-                      <img src="/img/blog/b4.jpg" alt="Blog image about design trends" />
+                      <img src="/img/blog/b4.jpg" alt="Blog post about contemporary flooring trends and interior design inspiration" />
                     </a>
                   </Link>
                 </div>

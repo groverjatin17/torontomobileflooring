@@ -39,9 +39,9 @@ const Clients1 = ({ theme, subBG }) => {
                     >
                       <div className="img">
                         {theme === "light" ? (
-                          <img src={item.lightImage} alt={`Logo for ${item.url}`} />
+                          <img src={item.lightImage} alt={`${item.url} - partner brand in flooring solutions`} />
                         ) : (
-                          <img src={item.darkImage} alt={`Logo for ${item.url}`} />
+                          <img src={item.darkImage} alt={`${item.url} - partner brand in flooring solutions`} />
                         )}
                         <Split>
                           <a
@@ -89,9 +89,9 @@ const Clients1 = ({ theme, subBG }) => {
                     >
                       <div className="img">
                         {theme === "light" ? (
-                          <img src={item.lightImage} alt={`Logo for ${item.url}`} />
+                          <img src={item.lightImage} alt={`${item.url} - partner brand in flooring solutions`} />
                         ) : (
-                          <img src={item.darkImage} alt={`Logo for ${item.url}`} />
+                          <img src={item.darkImage} alt={`${item.url} - partner brand in flooring solutions`} />
                         )}
                         <Split>
                           <a

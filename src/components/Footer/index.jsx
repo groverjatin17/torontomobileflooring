@@ -25,7 +25,7 @@ const Footer = ({ noSubBG }) => {
             <div className="cont">
               <div className="logo">
                 <a href="#0">
-                  <img src={`${appData.lightLogo}`} alt="Toronto Mobile Flooring logo" />
+                  <img src={`${appData.lightLogo}`} alt="Toronto Mobile Flooring company logo - mobile flooring installation services" />
                 </a>
               </div>
               <div className="con-info custom-font">
@@ -94,13 +94,13 @@ const Footer = ({ noSubBG }) => {
               <h6 className="custom-font stit simple-btn">Instagram Post</h6>
               <div className="insta-gallary">
                 <a href={instagramHandle}>
-                  <img src="/img/insta/1.jpg" alt="Instagram post preview 1" />
+                  <img src="/img/insta/1.jpg" alt="Toronto Mobile Flooring Instagram - flooring project showcase 1" />
                 </a>
                 <a href={instagramHandle}>
-                  <img src="/img/insta/2.jpg" alt="Instagram post preview 2" />
+                  <img src="/img/insta/2.jpg" alt="Toronto Mobile Flooring Instagram - flooring installation update 2" />
                 </a>
                 <a href={instagramHandle}>
-                  <img src="/img/insta/3.jpg" alt="Instagram post preview 3" />
+                  <img src="/img/insta/3.jpg" alt="Toronto Mobile Flooring Instagram - completed renovation project 3" />
                 </a>
               </div>
             </div>

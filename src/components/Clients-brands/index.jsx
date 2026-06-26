@@ -72,7 +72,7 @@ const ClientsBrands = ({ subBG, theme }) => {
                 <div className="img">
                   <img
                     src={theme == "dark" ? item.darkImage : item.lightImage}
-                    alt={`Logo for ${item.url}`}
+                    alt={`${item.url} - trusted partner of Toronto Mobile Flooring`}
                   />
                 </div>
                 <Split>

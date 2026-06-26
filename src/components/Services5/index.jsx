@@ -16,7 +16,7 @@ const Services5 = () => {
         <div className="row">
           <div className="col-lg-5 offset-lg-1 md-mb50">
             <div className="img">
-              <img src="/img/intro/planning1.jpg" alt="Video preview for planning workflow" />
+              <img src="/img/intro/planning1.jpg" alt="Toronto Mobile Flooring consultation and planning services video overview" />
               <div className="vid-icon">
                 <a
                   className="vid"

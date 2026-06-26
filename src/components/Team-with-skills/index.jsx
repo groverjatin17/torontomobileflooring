@@ -53,14 +53,14 @@ const TeamWithSkills = () => {
                       data-tooltip-tit="Stephanie Lawrence"
                       data-tooltip-sub="CEO, Colabrio Media"
                     >
-                      <img src="/img/team/1.jpg" alt="Team member Stephanie Lawrence" className="imago wow" />
+                      <img src="/img/team/1.jpg" alt="Stephanie Lawrence - Floor Cover Installer specialist" className="imago wow" />
                     </div>
                     <div
                       className="img sizmd"
                       data-tooltip-tit="Alex Regelman"
                       data-tooltip-sub="Co-Founder, Colabrio Media"
                     >
-                      <img src="/img/team/2.jpg" alt="Team member Alex Regelman" className="imago wow" />
+                      <img src="/img/team/2.jpg" alt="Alex Regelman - Professional flooring installer" className="imago wow" />
                     </div>
                   </div>
                 </div>
@@ -71,14 +71,14 @@ const TeamWithSkills = () => {
                       data-tooltip-tit="Stacey Stamper"
                       data-tooltip-sub="Network Partner, Colabrio Media"
                     >
-                      <img src="/img/team/3.jpg" alt="Team member Stacey Stamper" className="imago wow" />
+                      <img src="/img/team/3.jpg" alt="Stacey Stamper - Flooring installation expert" className="imago wow" />
                     </div>
                     <div
                       className="img sizsm"
                       data-tooltip-tit="Stephanie Lawrence"
                       data-tooltip-sub="CEO, Colabrio Media"
                     >
-                      <img src="/img/team/4.jpg" alt="Team member Stephanie Lawrence" className="imago wow" />
+                      <img src="/img/team/4.jpg" alt="Stephanie Lawrence - Floor Cover Installer specialist" className="imago wow" />
                     </div>
                   </div>
                 </div>
