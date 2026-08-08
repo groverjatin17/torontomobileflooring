@@ -25,13 +25,13 @@ const VideoWithTestimonials = () => {
       <div
         className="background bg-img section-padding pb-0"
         style={{ backgroundImage: `url(/img/slid/1.jpg)` }}
-        data-overlay-dark="8"
+        data-overlay-dark="2"
       >
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="vid-area">
-                <div className="vid-icon">
+                {/* <div className="vid-icon">
                   {typeof window !== "undefined" && (
                     <ModalVideo
                       channel="vimeo"
@@ -55,7 +55,7 @@ const VideoWithTestimonials = () => {
                       </span>
                     </div>
                   </a>
-                </div>
+                </div> */}
 
                 <div className="cont">
                   <Split>
