@@ -7,8 +7,75 @@ import { instagramHandle } from "../../constants";
 
 const ContactWithMap = ({ theme = "dark" }) => {
   const messageRef = React.useRef(null);
+  const verificationRef = React.useRef(null);
+  const widgetIdRef = React.useRef(null);
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [recaptchaToken, setRecaptchaToken] = React.useState("");
+  const [verificationError, setVerificationError] = React.useState("");
+  const [submitError, setSubmitError] = React.useState("");
+
+  React.useEffect(() => {
+    if (!recaptchaSiteKey || !verificationRef.current) return undefined;
+
+    let active = true;
+    const renderWidget = () => {
+      if (
+        !active ||
+        typeof window.grecaptcha?.render !== "function" ||
+        !verificationRef.current ||
+        widgetIdRef.current !== null
+      ) {
+        return;
+      }
+      widgetIdRef.current = window.grecaptcha.render(verificationRef.current, {
+        sitekey: recaptchaSiteKey,
+        callback: (token) => {
+          setRecaptchaToken(token);
+          setVerificationError("");
+        },
+        "expired-callback": () => setRecaptchaToken(""),
+        "error-callback": () => setVerificationError("Verification could not load. Please try again."),
+      });
+    };
+    const script =
+      document.querySelector("script[data-recaptcha]") || document.createElement("script");
+    const onScriptError = () =>
+      setVerificationError("Verification could not load. Please try again.");
+    window.contactRecaptchaOnload = renderWidget;
+
+    if (typeof window.grecaptcha?.render === "function") {
+      renderWidget();
+    } else {
+      if (!script.src) {
+        script.src =
+          "https://www.google.com/recaptcha/api.js?onload=contactRecaptchaOnload&render=explicit";
+        script.async = true;
+        script.defer = true;
+        script.dataset.recaptcha = "true";
+        document.head.appendChild(script);
+      }
+      script.addEventListener("error", onScriptError);
+    }
+
+    return () => {
+      active = false;
+      script.removeEventListener("error", onScriptError);
+      if (widgetIdRef.current !== null && window.grecaptcha) {
+        window.grecaptcha.reset(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
+    };
+  }, [recaptchaSiteKey]);
+
+  const resetVerification = () => {
+    setRecaptchaToken("");
+    if (widgetIdRef.current !== null && window.grecaptcha) {
+      window.grecaptcha.reset(widgetIdRef.current);
+    }
+  };
+
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -25,11 +92,7 @@ const ContactWithMap = ({ theme = "dark" }) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              {isLoading ? (
-                <div className="loading">
-                  <Image src="/img/loading.gif" alt="loading" width={48} height={48} />
-                </div>
-              ) : !isSubmitted ? (
+              {!isSubmitted ? (
                 <div className="form md-mb50">
                   <h4 className="extra-title mb-50">Get In Touch.</h4>
 
@@ -38,23 +101,26 @@ const ContactWithMap = ({ theme = "dark" }) => {
                       name: "",
                       email: "",
                       message: "",
+                      website: "",
                     }}
                     onSubmit={async (values, onSubmitProps) => {
+                      if (!recaptchaSiteKey || !recaptchaToken) {
+                        setSubmitError("Please complete the verification before sending.");
+                        return;
+                      }
+
                       setIsLoading(true);
+                      setSubmitError("");
 
                       try {
-                        const response = await sendContactForm(values);
-
-                        if (!response) {
-                          setIsLoading(false);
-                          return;
-                        }
-                        setIsLoading(false);
+                        await sendContactForm({ ...values, recaptchaToken });
                         setIsSubmitted(true);
                         onSubmitProps.resetForm();
                       } catch (error) {
-                      console.error(error);
-                      setIsLoading(false);
+                        setSubmitError("We could not send your message. Please try again.");
+                        resetVerification();
+                      } finally {
+                        setIsLoading(false);
                       }
                     }}
                   >
@@ -63,6 +129,14 @@ const ContactWithMap = ({ theme = "dark" }) => {
                         <div className="messages" ref={messageRef}></div>
 
                         <div className="controls">
+                          <Field
+                            type="text"
+                            name="website"
+                            tabIndex="-1"
+                            autoComplete="off"
+                            aria-hidden="true"
+                            style={{ position: "absolute", left: "-10000px" }}
+                          />
                           <div className="form-group">
                             <Field
                               id="form_name"
@@ -98,13 +172,28 @@ const ContactWithMap = ({ theme = "dark" }) => {
                             />
                           </div>
 
+                          {recaptchaSiteKey ? (
+                            <div className="form-group">
+                              <div ref={verificationRef} />
+                              {verificationError && (
+                                <div className="error" role="alert">{verificationError}</div>
+                              )}
+                            </div>
+                          ) : (
+                            <div className="error" role="alert">
+                              The contact form is temporarily unavailable. Please email or call us.
+                            </div>
+                          )}
+                          {submitError && <div className="error" role="alert">{submitError}</div>}
+
                           <button
                             type="submit"
                             className={`btn-curve ${
                               theme === "dark" ? "btn-lit" : "btn-color"
-                            } disabled`}
+                            }`}
+                            disabled={isLoading || !recaptchaSiteKey || !recaptchaToken}
                           >
-                            <span>Send Message</span>
+                            <span>{isLoading ? "Sending..." : "Send Message"}</span>
                           </button>
                         </div>
                       </Form>

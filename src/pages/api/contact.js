@@ -1,56 +1,157 @@
 import { mailOptions, transponder } from "../../../config/nodemailer";
 
-const CONTACT_MESSAGE_FIELDS = {
-  name: "Name",
-  email: "Email",
-  subject: "Subject",
-  message: "Message",
+const RATE_LIMIT = 5;
+const RATE_WINDOW_SECONDS = 60 * 60;
+const RATE_LIMIT_SCRIPT =
+  "local count = redis.call('INCR', KEYS[1]); " +
+  "if count == 1 then redis.call('EXPIRE', KEYS[1], ARGV[1]); end; " +
+  "return count;";
+
+const escapeHtml = (value) =>
+  value.replace(/[&<>"']/g, (character) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
+    return entities[character];
+  });
+
+const getClientIp = (req) => {
+  return (
+    req.headers["cf-connecting-ip"] ||
+    req.headers["x-real-ip"] ||
+    req.socket.remoteAddress ||
+    "unknown"
+  );
 };
 
-const generateEmailContent = (data) => {
-  const stringData = Object.entries(data).reduce(
-    (str, [key, val]) =>
-      (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
-    ""
+const checkRateLimit = async (ip) => {
+  const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
+  const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!redisUrl || !redisToken) throw new Error("Rate limiter is not configured");
+
+  const { createHash } = await import("crypto");
+  const ipHash = createHash("sha256").update(ip).digest("hex");
+  const response = await fetch(redisUrl.replace(/\/$/, ""), {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${redisToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify([
+      "EVAL",
+      RATE_LIMIT_SCRIPT,
+      1,
+      `contact-rate:${ipHash}`,
+      RATE_WINDOW_SECONDS,
+    ]),
+  });
+  if (!response.ok) throw new Error("Rate limiter request failed");
+
+  const result = await response.json();
+  if (result.error || typeof result.result !== "number") {
+    throw new Error("Rate limiter returned an invalid response");
+  }
+  return result.result <= RATE_LIMIT;
+};
+
+const verifyRecaptcha = async (token, ip) => {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secret) throw new Error("reCAPTCHA is not configured");
+
+  const body = new URLSearchParams({ secret, response: token, remoteip: ip });
+  const response = await fetch(
+    "https://www.google.com/recaptcha/api/siteverify",
+    { method: "POST", body }
   );
-  const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
-  }, "");
+  if (!response.ok) throw new Error("reCAPTCHA verification request failed");
+
+  const result = await response.json();
+  return result.success === true;
+};
+
+const generateEmailContent = ({ name, email, message }) => {
+  const fields = [
+    ["Name", name],
+    ["Email", email],
+    ["Message", message],
+  ];
+  const text = fields.map(([label, value]) => `${label}:\n${value}`).join("\n\n");
+  const html = fields
+    .map(
+      ([label, value]) =>
+        `<h3>${label}</h3><p style="white-space: pre-wrap">${escapeHtml(value)}</p>`
+    )
+    .join("");
 
   return {
-    text: stringData,
-    html: `<!DOCTYPE html><html> <head> <title></title> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <style type="text/css"> body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}table{border-collapse: collapse !important;}body{height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important;}@media screen and (max-width: 525px){.wrapper{width: 100% !important; max-width: 100% !important;}.responsive-table{width: 100% !important;}.padding{padding: 10px 5% 15px 5% !important;}.section-padding{padding: 0 15px 50px 15px !important;}}.form-container{margin-bottom: 24px; padding: 20px; border: 1px dashed #ccc;}.form-heading{color: #2a2a2a; font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: 400; text-align: left; line-height: 20px; font-size: 18px; margin: 0 0 8px; padding: 0;}.form-answer{color: #2a2a2a; font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: 300; text-align: left; line-height: 20px; font-size: 16px; margin: 0 0 24px; padding: 0;}div[style*="margin: 16px 0;"]{margin: 0 !important;}</style> </head> <body style="margin: 0 !important; padding: 0 !important; background: #fff"> <div style=" display: none; font-size: 1px; color: #fefefe; line-height: 1px;  max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; " ></div><table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td bgcolor="#ffffff" align="center" style="padding: 10px 15px 30px 15px" class="section-padding" > <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px" class="responsive-table" > <tr> <td> <table width="100%" border="0" cellspacing="0" cellpadding="0"> <tr> <td> <table width="100%" border="0" cellspacing="0" cellpadding="0" > <tr> <td style=" padding: 0 0 0 0; font-size: 16px; line-height: 25px; color: #232323; " class="padding message-content" > <h2>New Contact Message</h2> <div class="form-container">${htmlData}</div></td></tr></table> </td></tr></table> </td></tr></table> </td></tr></table> </body></html>`,
+    text,
+    html: `<html><body><h2>New Contact Message</h2>${html}</body></html>`,
   };
 };
 
 const handler = async (req, res) => {
-  console.log(req.body);
-  if (req.method === "POST") {
-    const data = req.body;
-    if (!data.email || !data.name || !data.message) {
-      return res
-        .status(400)
-        .json({ message: "One of the values are not present" });
-    }
-
-    try {
-      await transponder.sendMail({
-        ...mailOptions,
-        ...generateEmailContent(data),
-        subject: "Email from " + data.name,
-      });
-
-      return res.status(200).json({ success: true });
-    } catch (error) {
-      console.error(error);
-
-      return res
-        .status(400)
-        .json({ message: "Caught in catch block of email" });
-    }
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ message: "Method not allowed" });
   }
 
-  res.status(400).json({ message: "Bad Request" });
+  const data = req.body;
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
+    return res.status(400).json({ message: "Invalid request" });
+  }
+
+  if (typeof data.website === "string" && data.website.trim()) {
+    return res.status(200).json({ success: true });
+  }
+
+  const name = typeof data.name === "string" ? data.name.trim() : "";
+  const email = typeof data.email === "string" ? data.email.trim() : "";
+  const message = typeof data.message === "string" ? data.message.trim() : "";
+  if (
+    !name || name.length > 100 ||
+    !email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+    !message || message.length > 5000
+  ) {
+    return res.status(400).json({ message: "Invalid contact details" });
+  }
+
+  const ip = getClientIp(req);
+  try {
+    if (!(await checkRateLimit(ip))) {
+      res.setHeader("Retry-After", String(RATE_WINDOW_SECONDS));
+      return res.status(429).json({ message: "Too many requests" });
+    }
+  } catch {
+    return res.status(503).json({ message: "Contact form is temporarily unavailable" });
+  }
+
+  if (typeof data.recaptchaToken !== "string" || !data.recaptchaToken) {
+    return res.status(400).json({ message: "Verification required" });
+  }
+
+  try {
+    if (!(await verifyRecaptcha(data.recaptchaToken, ip))) {
+      return res.status(400).json({ message: "Verification failed" });
+    }
+  } catch {
+    return res.status(503).json({ message: "Verification is temporarily unavailable" });
+  }
+
+  try {
+    await transponder.sendMail({
+      ...mailOptions,
+      ...generateEmailContent({ name, email, message }),
+      replyTo: email,
+      subject: "New contact form submission",
+    });
+    return res.status(200).json({ success: true });
+  } catch {
+    return res.status(500).json({ message: "Unable to send message" });
+  }
 };
 
 export default handler;
